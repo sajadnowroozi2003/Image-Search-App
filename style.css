@@ -55,7 +55,7 @@ form{
     justify-content:space-between;
     max-width: 1200px;
     margin: 0 auto;
-
+    padding: 10px;
 }
 
 .search-result{
@@ -83,5 +83,45 @@ form{
     display: block;
     color: #333;
     text-decoration: none;
+    transition: background-color .3s ease-in-out;
 }
 
+.search-result:hover a{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#show-more-button{
+    background-color: #008cba;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    margin: 50px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+#show-more-button:hover{
+    background-color: #0077b5;
+}
+
+@media screen and (max-width:768px){
+    .search-result{
+        width: 45%;
+
+    }
+}
+@media screen and (max-width:480PX){
+    .search-result{
+        width: 100%;
+
+    }
+    form{
+        flex-direction: column;
+    }
+    #search-input   {
+        margin-bottom: 20px;
+        width: 85%;
+    }
+}
